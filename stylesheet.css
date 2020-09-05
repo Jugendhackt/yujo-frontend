@@ -27,6 +27,12 @@ input[type=text]{
   transition: 0.45s;
 }
 
+::placeholder {
+  color: orange;
+  opacity: 1;
+}
+
+
 input[type=button]{
   height: 60px;
   width: 450px;
