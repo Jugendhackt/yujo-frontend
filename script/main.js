@@ -3,7 +3,7 @@ const app = (() => {
 
   // Selektoren der html container
   const screenIds = [
-    "startScreen", "showPinScreen", "enterPinScreen"
+    "startScreen", "showPinScreen", "enterPinScreen", "tutorialScreen", "questionScreen"
   ];
 
   // Zustand der app
@@ -77,4 +77,3 @@ $( document ).ready(() => {
   // Starte app
   app.start();
 });
-
