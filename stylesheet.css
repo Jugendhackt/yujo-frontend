@@ -131,13 +131,13 @@ div[class=box2]{
 .Player1_hit{
   position: relative;
   top:69%;
-  right: 5%
+  right: 10%
 }
 
 .Player2_hit{
   position:relative;
   top:69%;
-  left: 15%;
+  left: 10%;
 }
 
 .Gegner{
@@ -148,12 +148,12 @@ div[class=box2]{
 
 .Gegner_hit{
   position:relative;
-  top:20%;
-  right: 20%;
+  top:30%;
+  right: 18%;
 }
 
 .Gegner_attack{
   position:relative;
-  top:30%;
-  right: 18%
+  top:29%;
+  right: 20%
 }
