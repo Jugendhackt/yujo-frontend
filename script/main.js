@@ -3,7 +3,7 @@ const app = (() => {
 var server = "https://yujo.jugendhacker.de"
   // Selektoren der html container
   const screenIds = [
-    "startScreen", "showPinScreen", "enterPinScreen", "tutorialScreen", "questionScreen"
+    "startScreen", "showPinScreen", "enterPinScreen", "tutorialScreen", "questionScreen", "playerAttackScreen", "playerHitScreen"
   ];
 
   // Zustand der app
