@@ -37,9 +37,21 @@ const app = (() => {
     showScreen(state.currentScreenId);
   }
 
+  const startNewGame = () => {
+    // API-Aufruf /create
+    showScreen(screenIds.indexOf("showPinScreen"))
+  }
+
+  const joinGame = () => {
+    // API-Aufruf /join
+    showScreen(screenIds.indexOf("enterPinScreen"))
+  }
+
   return {
     start: start,
     nextScreen: nextScreen,
+    startNewGame: startNewGame,
+    joinGame: joinGame,
     state: state
   }
 })();
@@ -50,6 +62,16 @@ $( document ).ready(() => {
   $("#nextScreenLink").click(() => {
     app.nextScreen();
   })
+
+  // Button
+  $("#startNewGameBtn").click(() => {
+    app.startNewGame();
+  })
+
+  $("#joinGameBtn").click(() => {
+    app.joinGame();
+  })
+
 
   // Starte app
   app.start();
