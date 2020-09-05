@@ -4,29 +4,37 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./script/main.js"></script>
 </head>
 <body>
+  <!-- start.html -->
   <div id="startScreen">
     <h1> Yujo - Gemeinsam ist man stärker </h1>
     <p> <input type="text" placeholder="Wie heißt du?" /> </p>
-    <p> <input type="button" value="Neues Spiel anlegen" /> </p>
-    <p> <input type="button" value="Spiel beitreten" /> </p>
+    <p> <input id="startNewGameBtn" type="button" value="Neues Spiel anlegen" /> </p>
+    <p> <input id="joinGameBtn" type="button" value="Spiel beitreten" /> </p>
   </div>
+
+  <!-- 1.1.html -->
   <div id="showPinScreen">
     <h1> Yujo - Gemeinsam ist man stärker </h1>
     <p id="Pinfeld">123456</p>
     <p> Diesen Pin muss dein*e Freund*in eintippen :)
   </div>
+
+  <!-- 1.2.html -->
   <div id="enterPinScreen">
     <h1> Yujo - Gemeinsam ist man stärker </h1>
     <p><input type="text" name="mitte" placeholder="Hier PIN eingeben" /></p>
   </div>
 
+  <!-- 2.html -->
+
+  <!-- 3.html -->
+
 
   <div style="position: absolute; left: 0; bottom: 0">
     <a id="nextScreenLink" href="#">Next screen</a>
   </div>
-
-  <script src="./script/main.js"></script>
 </body>
 </html>
