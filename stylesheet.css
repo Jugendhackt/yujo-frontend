@@ -32,6 +32,20 @@ input[type=text]{
   opacity: 1;
 }
 
+input[name=mitte]{
+  margin-top: 15%;
+  height: 80px;
+  width: 470px;
+  font-size : 50px;
+  transition:0.7s;
+}
+
+input[name=mitte]:hover{
+  height: 90px;
+  width: 500px;
+  font-size : 55px;
+  border-radius: 50px;
+}
 
 input[type=button]{
   height: 60px;
@@ -56,4 +70,10 @@ input:hover{
 input:focus{
   background-color:darkorange;
   color:yellow;
+}
+
+p{
+  margin:50px;
+  color: orange;
+  font-size : 40px;
 }
