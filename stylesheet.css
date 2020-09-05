@@ -10,11 +10,13 @@ h1{
   font-weight: 300;
   font-family: cursive;
   color: yellow;
+  cursor: default;
+  user-select: none;
 }
 
-
-input{
+input[type=text]{
   height: 60px;
+  width: 450px;
   font-size : 40px;
   text-align: center;
   border-radius: 15px;
@@ -22,4 +24,30 @@ input{
   background-color: lime;
   border-color:forestgreen;
   color:orange;
+  transition: 0.45s;
+}
+
+input[type=button]{
+  height: 60px;
+  width: 450px;
+  font-size : 40px;
+  text-align: center;
+  border-radius: 15px;
+  margin:50px;
+  background-color: lime;
+  border-color:forestgreen;
+  color:orange;
+  transition: 0.45s;
+}
+
+input:hover{
+  background-color: yellow;
+  width: 480px;
+  height: 70px;
+  border-radius: 30px;
+}
+
+input:focus{
+  background-color:darkorange;
+  color:yellow;
 }
