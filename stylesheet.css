@@ -85,3 +85,10 @@ p[name=groesser]{
   line-height: 80px;
   user-select: none;
 }
+
+div[name=eins]{
+  float: left;
+  padding-right: 50%;
+  padding-bottom:100%;
+  background: red;
+}
