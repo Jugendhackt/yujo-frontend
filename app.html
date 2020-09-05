@@ -29,10 +29,25 @@
   </div>
 
   <!-- 2.html -->
-
+  <div id="tutorialScreen">
+    <h1> Tutorial  </h1>
+    <p name="groesser"> Willkommen bei Yujo! Das Spiel bei dem man mit Freundschaft gewinnt!
+      <br>Die Regeln sind ganz einfach: Euch wird eine Frage gestellt, und ihr sollt erraten, was der andere antwortet! Gebt ihr beide die gleiche Antwort, dürft ihr den Gegner angreifen. Wenn ihr unterschiedliche Antworten gibt, dürft ihr leider nicht angreifen und die Attacke des Gegners ist stärker. Fallen eure HP auf null, habt ihr verloren.
+      <br>Viel Glück und mögen die besten Freunde gewinnen! </p>
+  </div>
   <!-- 3.html -->
-
-
+  <div id="questionScreen">
+    <div class="box" id="links">
+     <image class="Player1" src="images/player_hinten_gr.png" title="Player1" alt="Es ist ein Fehler aufgetreten" />
+     <image class="Player2" src="images/player_hinten_o.png" title="Player2" alt="Es ist ein Fehler aufgetreten" />
+     <image class="Gegner" src="images/GegnerSprite1.png" title="Gegner" alt="Es ist ein Fehler aufgetreten" />
+      </div>
+     <div class="box1" id="rechts">
+       <p id="Frage"> </p>
+       <input type="button" name="Player1" class="Antwort" style="margin-top:30%;" value="Spieler 1" />
+       <p> <input type="button" name="Player2" class="Antwort"  value="Spieler 2" /> </p>
+     </div>
+  </div>
   <div style="position: absolute; left: 0; bottom: 0">
     <a id="nextScreenLink" href="#">Next screen</a>
   </div>
