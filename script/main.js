@@ -1,6 +1,6 @@
 // App-Logik
 const app = (() => {
-
+var server = "https://yujo.jugendhacker.de"
   // Selektoren der html container
   const screenIds = [
     "startScreen", "showPinScreen", "enterPinScreen", "tutorialScreen", "questionScreen"
@@ -38,7 +38,14 @@ const app = (() => {
   }
 
   const startNewGame = () => {
+    console.log("Hallo welt")
+    var Host = $("#username").val()
+    console.log(Host)
     // API-Aufruf /create
+    $.post(`${server}/create`,JSON.stringify({"name": Host}), (data, status) => {
+      console.log(data)
+      console.log(status)
+    })
     showScreen(screenIds.indexOf("showPinScreen"))
   }
 
