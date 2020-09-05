@@ -77,3 +77,11 @@ p{
   color: orange;
   font-size : 40px;
 }
+
+p[name=groesser]{
+  margin:60px;
+  color:orange;
+  font-size:58px;
+  line-height: 80px;
+  user-select: none;
+}
