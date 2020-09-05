@@ -1,7 +1,7 @@
 body{
   text-align: center;
-  background-image: linear-gradient(green,limegreen);
-  background-repeat: no-repeat;
+  background: linear-gradient(green,limegreen) no-repeat center center fixed;
+  background-size: cover;
 }
 
 h1{
