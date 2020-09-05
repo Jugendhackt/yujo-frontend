@@ -5,13 +5,19 @@ body{
 h1{
   font-size: 80px;
   margin-top: 20px;
+  font-weight: 300;
+  font-family: cursive;
+  color: yellow;
 }
 
 
 input{
   height: 60px;
   font-size : 40px;
-  text-align:center;
-  border-radius: 5px;
-  margin:30px;
+  text-align: center;
+  border-radius: 15px;
+  margin:50px;
+  background-color: lime;
+  border-color:forestgreen;
+  color:orange;
 }
