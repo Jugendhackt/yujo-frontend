@@ -86,9 +86,32 @@ p[name=groesser]{
   user-select: none;
 }
 
-div[name=eins]{
+div[class=box]{
   float: left;
-  padding-right: 50%;
-  padding-bottom:100%;
-  background: red;
+  width: 50%;
+  height: 100%;
+}
+
+div[class=box1]{
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, yellow, orange);
+}
+
+.Player1{
+  position: relative;
+  top:70%;
+}
+
+.Player2{
+  position:relative;
+  top:70%;
+  left: 20%;
+}
+
+.Gegner{
+  position:relative;
+  top:30%;
+  right: 23%
 }
