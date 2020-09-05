@@ -63,11 +63,12 @@ $( document ).ready(() => {
     app.nextScreen();
   })
 
-  // Button
+  // Button to Start Game
   $("#startNewGameBtn").click(() => {
     app.startNewGame();
   })
 
+  // Button to Join Game
   $("#joinGameBtn").click(() => {
     app.joinGame();
   })
