@@ -76,6 +76,7 @@ p{
   margin:50px;
   color: orange;
   font-size : 40px;
+  user-select: none;
 }
 
 p[name=groesser]{
@@ -156,4 +157,53 @@ div[class=box2]{
   position:relative;
   top:29%;
   right: 20%
+}
+
+.Player1_won{
+  position: absolute;
+  bottom: 20%;
+  right: 75%;
+}
+
+.Player2_won{
+  position: absolute;
+  bottom: 20%;
+  left: 75%;
+}
+
+.Player1_lost{
+  position: absolute;
+  bottom: 20%;
+  right: 77%;
+}
+
+.Player2_lost{
+  position: absolute;
+  bottom: 20%;
+  left: 77%;
+}
+
+.boxEnde{
+  position: relative;
+  top: 30%;
+  height: 40%
+}
+
+.boxEnde input{
+  width: 500px;
+}
+
+.boxEnde input:hover{
+  width: 530px;
+}
+
+b{
+  font-size: 60px;
+  color: orange;
+  font-family: cursive;
+  user-select: none;
+}
+
+img{
+  user-select:none;
 }

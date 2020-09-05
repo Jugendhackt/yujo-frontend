@@ -38,9 +38,9 @@
   <!-- 3.html -->
   <div id="questionScreen">
     <div class="box" id="links">
-     <image class="Player1" src="images/player_hinten_gr.png" title="Player1" alt="Es ist ein Fehler aufgetreten" />
-     <image class="Player2" src="images/player_hinten_o.png" title="Player2" alt="Es ist ein Fehler aufgetreten" />
-     <image class="Gegner" src="images/GegnerSprite1.png" title="Gegner" alt="Es ist ein Fehler aufgetreten" />
+     <image class="Player1" src="images/player_hinten_gr.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+     <image class="Player2" src="images/player_hinten_o.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+     <image class="Gegner" src="images/GegnerSprite1.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
       </div>
      <div class="box1" id="rechts">
        <p id="Frage"> </p>
@@ -53,9 +53,9 @@
   <div id="playerAttackScreen">
     <p id="richtig-falsch"> </p>
     <div class="box2" id="ganz">
-      <image class="Player1_attack" src="images/player_hinten_gr.png" title="Player1" alt="Es ist ein Fehler aufgetreten" />
-      <image class="Player2_attack" src="images/player_hinten_o.png" title="Player2" alt="Es ist ein Fehler aufgetreten" />
-      <image class="Gegner_hit" src="images/Gegner_hit.gif" title="Gegner" alt="Es ist ein Fehler aufgetreten" />
+      <image class="Player1_attack" src="images/player_hinten_gr.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+      <image class="Player2_attack" src="images/player_hinten_o.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+      <image class="Gegner_hit" src="images/Gegner_hit.gif" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
     </div>
   </div>
 
@@ -63,13 +63,36 @@
   <div id="playerHitScreen">
     <p id="richtig-falsch"> </p>
     <div class="box2" id="ganz">
-      <image class="Player1_hit" src="images/player1_hit.gif" title="Player1" alt="Es ist ein Fehler aufgetreten" />
-      <image class="Player2_hit" src="images/player2_hit.gif" title="Player2" alt="Es ist ein Fehler aufgetreten" />
-      <image class="Gegner_attack" src="images/GegnerSprite1.png" title="Gegner" alt="Es ist ein Fehler aufgetreten" />
+      <image class="Player1_hit" src="images/player1_hit.gif" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+      <image class="Player2_hit" src="images/player2_hit.gif" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+      <image class="Gegner_attack" src="images/GegnerSprite1.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
        </div>
     </div>
   </div>
 
+  <!-- 5.1.html -->
+  <div id="wonScreen">
+    <p id="richtig-falsch"> </p>
+    <div class="boxEnde">
+      <image class="Player1_won" src="images/Player_Glücklich_gr.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+      <b> Ihr habt gewonnen!<br> Gut gemacht! </b>
+      <image class="Player2_won" src="images/player_Glücklich_o.png"  alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+      <br>
+      <input type="button" id="beenden" value="Zurück zum Startbildschirm" />
+    </div>
+  </div>
+
+<!-- 5.2.html -->
+<div id="lostScreen">
+  <p id="richtig-falsch"> </p>
+  <div class="boxEnde">
+    <image class="Player1_lost" src="images/Player_Traurig_gr.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+    <b> Verloren...<br> Beim nächsten Mal klappts besser! </b>
+    <image class="Player2_lost" src="images/Player_Traurig_o.png" alt="Es ist ein Fehler aufgetreten" draggable="false" ondragstart="return false" />
+    <br>
+    <input type="button" id="beenden" value="Zurück zum Startbildschirm" />
+  </div>
+</div>
 
   <div style="position: absolute; left: 0; bottom: 0">
     <a id="nextScreenLink" href="#">Next screen</a>
