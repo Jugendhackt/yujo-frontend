@@ -77,8 +77,9 @@ var server = "https://yujo.jugendhacker.de"
 
   const getQuestion = () => {
     $.get(`${server}/game/${state.uuid}/round/${state.round}`,{}, (responseData, status) => {
-      if (status === 200) {
-        console.log(response)
+      if (status === "success") {
+        console.log(responseData)
+        $("#Frage").html(responseData.question)
       }
     })
   }
