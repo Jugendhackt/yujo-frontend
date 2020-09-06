@@ -60,6 +60,7 @@ var server = "https://yujo.jugendhacker.de"
 
   // Auf beide Spieler warten
   const waitToStartGame = () => {
+    $("wait").show()
     startPolling(`${server}/game/${state.uuid}`, {}, (data) => {
       state.creatorName = data.names.creatorName
       state.teammateName = data.names.teammateName
@@ -81,6 +82,7 @@ var server = "https://yujo.jugendhacker.de"
     $.get(`${server}/game/${state.uuid}/round/${state.round}`,{}, (responseData, status) => {
       if (status === "success") {
         console.log(responseData)
+        $("wait").hide()
         $("#Frage").html(responseData.question)
       }
     })
