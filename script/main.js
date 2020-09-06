@@ -123,6 +123,7 @@ var server = "https://yujo.jugendhacker.de"
     $.post(`${server}/game/${state.uuid}/round/${state.round}`, JSON.stringify({ "answer": 1 }), (data, status) => {
         console.log(data)
         console.log(status)
+        showScreen(screenIds.indexOf("playerHitScreen"))
     })
   }
 
@@ -130,6 +131,7 @@ var server = "https://yujo.jugendhacker.de"
     $.post(`${server}/game/${state.uuid}/round/${state.round}`, JSON.stringify({ "answer": 0 }), (data, status) => {
         console.log(data)
         console.log(status)
+        showScreen(screenIds.indexOf("playerHitScreen"))
     })
   }
 
