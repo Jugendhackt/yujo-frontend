@@ -119,13 +119,28 @@ var server = "https://yujo.jugendhacker.de"
     const interval = setInterval(request, 3000);
   }
 
+  const teammateSendAnswer = () => {
+    $.post(`${server}/game/${state.uuid}/round/${state.round}`, JSON.stringify({ "answer": 1 }), (data, status) => {
+        console.log(data)
+        console.log(status)
+    })
+  }
+
+  const creatorSendAnswer = () => {
+    $.post(`${server}/game/${state.uuid}/round/${state.round}`, JSON.stringify({ "answer": 0 }), (data, status) => {
+        console.log(data)
+        console.log(status)
+    })
+  }
+
   return {
     start: start,
     nextScreen: nextScreen,
     startNewGame: startNewGame,
     joinGame: joinGame,
     enterPinScreen: enterPinScreen,
-    state: state
+    teammateSendAnswer: teammateSendAnswer,
+    creatorSendAnswer: creatorSendAnswer,
   }
 })();
 
@@ -149,6 +164,14 @@ $( document ).ready(() => {
   // Button to enter pin and start game
   $("#startBtn").click(() => {
     app.joinGame();
+  })
+
+  $("#Teammate").click(() => {
+    app.teammateSendAnswer();
+  })
+
+  $("#Creator").click(() => {
+    app.creatorSendAnswer();
   })
 
   // Starte app
