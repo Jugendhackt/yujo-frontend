@@ -34,7 +34,7 @@ var server = "https://yujo.jugendhacker.de"
     showScreen(state.currentScreenId);
   }
 
-  // Funktion um zum nächsten Screen zu gehen (in der Reihenfolge 0, 1, 2, 3)
+  // Debug-Funktion um zum nächsten Screen zu gehen (in der Reihenfolge 0, 1, 2, 3)
   const nextScreen = () => {
     state.currentScreenId = state.currentScreenId + 1;
     if (state.currentScreenId >= screenIds.length) {
@@ -43,6 +43,7 @@ var server = "https://yujo.jugendhacker.de"
     showScreen(state.currentScreenId);
   }
 
+  // Start new game for host
   const startNewGame = () => {
     var Host = $("#username").val()
     // API-Aufruf /create
