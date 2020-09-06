@@ -40,24 +40,45 @@ var server = "https://yujo.jugendhacker.de"
   }
 
   const startNewGame = () => {
-    console.log("Hallo welt")
     var Host = $("#username").val()
-    console.log(Host)
     // API-Aufruf /create
     $.post(`${server}/create`,JSON.stringify({"name": Host}), (data, status) => {
-      console.log(data)
-      console.log(status)
-      state.gamepin = data.gamePin
-      state.uuid = data.id 
-      $("#Pinfeld").html(data.gamePin)
-      showScreen(screenIds.indexOf("showPinScreen"))
+      if (status === "success") {
+        state.gamepin = data.gamePin
+        state.uuid = data.uuid
+        $("#Pinfeld").html(data.gamePin)
+        showScreen(screenIds.indexOf("showPinScreen"))
+        waitToStartGame()
+      }
     })
+  }
 
+  // Auf beide Spieler warten
+  const waitToStartGame = () => {
+    startPolling(`${server}/game/${state.uuid}`, {}, (data) => {
+      console.log(data.names)
+      console.log(data.healthPoints)
+    })
   }
 
   const joinGame = () => {
     // API-Aufruf /join
     showScreen(screenIds.indexOf("enterPinScreen"))
+  }
+
+  // Server-Anfrage alle 2sek wiederholen bis eine Antwort kommt
+  const startPolling = (url, data, callback) => {
+    const request = () => {
+      $.get(url,data, (responseData, status) => {
+        if (status !== 409) {
+          clearInterval(interval)
+          callback(responseData, status)
+        }
+      })
+    }
+
+    // Poll für 3sek
+    const interval = setInterval(request, 3000);
   }
 
   return {
