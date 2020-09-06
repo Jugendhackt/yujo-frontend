@@ -84,6 +84,14 @@ var server = "https://yujo.jugendhacker.de"
     var Joiner = $("#nameJoiner").val()
     var Pin = $("#PinEingeben").val()
     console.log(Joiner, Pin)
+    $.post(`${server}/join/${Pin}`,JSON.stringify({"name": Joiner}), (data, status) => {
+      console.log(data)
+      console.log(status)
+      state.gamepin = data.gamePin
+      state.uuid = data.id 
+     
+      showScreen(screenIds.indexOf("#TutorialScreen"))
+    })
   }
 
   // Server-Anfrage alle 2sek wiederholen bis eine Antwort kommt
