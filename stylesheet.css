@@ -76,7 +76,6 @@ p{
   margin:50px;
   color: orange;
   font-size : 40px;
-  user-select: none;
 }
 
 p[name=groesser]{
