@@ -8,7 +8,9 @@ var server = "https://yujo.jugendhacker.de"
 
   // Zustand der app
   let state = {
-    currentScreenId: 0
+    currentScreenId: 0,
+    uuid: null,
+    gamepin: null,
   };
 
   // Funktion um einen Screen anzuzeigen (id = 0, 1, 2)
@@ -45,8 +47,12 @@ var server = "https://yujo.jugendhacker.de"
     $.post(`${server}/create`,JSON.stringify({"name": Host}), (data, status) => {
       console.log(data)
       console.log(status)
+      state.gamepin = data.gamePin
+      state.uuid = data.id 
+      $("#Pinfeld").html(data.gamePin)
+      showScreen(screenIds.indexOf("showPinScreen"))
     })
-    showScreen(screenIds.indexOf("showPinScreen"))
+
   }
 
   const joinGame = () => {
