@@ -63,6 +63,8 @@ var server = "https://yujo.jugendhacker.de"
     startPolling(`${server}/game/${state.uuid}`, {}, (data) => {
       state.creatorName = data.names.creatorName
       state.teammateName = data.names.teammateName
+      $("#Creator").val(state.creatorName)
+      $("#Teammate").val(state.teammateName)
       state.round = data.nextRoundID
       state.healthPoints = data.HealthPoints
       getQuestion()
