@@ -60,8 +60,11 @@ var server = "https://yujo.jugendhacker.de"
   // Auf beide Spieler warten
   const waitToStartGame = () => {
     startPolling(`${server}/game/${state.uuid}`, {}, (data) => {
-      console.log(data.names)
-      console.log(data.healthPoints)
+      state.creatorName = data.names.creatorName
+      state.teammateName = data.names.teammateName
+      state.round = data.nextRoundID
+      state.healthPoints = data.HealthPoints
+      getQuestion()
     })
   }
 
@@ -72,7 +75,7 @@ var server = "https://yujo.jugendhacker.de"
   }
 
   const getQuestion = () => {
-    $.get(`${server}/${state.uuid}/round/${state.round}`,data, (responseData, status) => {
+    $.get(`${server}/game/${state.uuid}/round/${state.round}`,{}, (responseData, status) => {
       if (status === 200) {
         console.log(response)
       }
@@ -88,9 +91,10 @@ var server = "https://yujo.jugendhacker.de"
       console.log(data)
       console.log(status)
       state.gamepin = data.gamePin
-      state.uuid = data.id 
-     
-      showScreen(screenIds.indexOf("#TutorialScreen"))
+      state.uuid = data.uuid
+
+      showScreen(screenIds.indexOf("questionScreen"))
+      waitToStartGame()
     })
   }
 
