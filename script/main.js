@@ -61,9 +61,16 @@ var server = "https://yujo.jugendhacker.de"
     })
   }
 
-  const joinGame = () => {
+  const enterPinscreen = () => {
+    
     // API-Aufruf /join
     showScreen(screenIds.indexOf("enterPinScreen"))
+
+  }
+  const joinGame = () => {
+    var Joiner = $("#nameJoiner").val()
+    var Pin = $("#PinEingeben").val()
+    console.log(Joiner, Pin)
   }
 
   // Server-Anfrage alle 2sek wiederholen bis eine Antwort kommt
@@ -86,6 +93,7 @@ var server = "https://yujo.jugendhacker.de"
     nextScreen: nextScreen,
     startNewGame: startNewGame,
     joinGame: joinGame,
+    enterPinScreen: enterPinscreen,
     state: state
   }
 })();
@@ -104,9 +112,12 @@ $( document ).ready(() => {
 
   // Button to Join Game
   $("#joinGameBtn").click(() => {
-    app.joinGame();
+    app.enterPinscreen();
   })
 
+  $("#startBtn").click(() => {
+    app.joinGame();
+  })
 
   // Starte app
   app.start();
