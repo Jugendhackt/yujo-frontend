@@ -132,16 +132,17 @@ $( document ).ready(() => {
     app.nextScreen();
   })
 
-  // Button to Start Game
+  // Button to start game
   $("#startNewGameBtn").click(() => {
     app.startNewGame();
   })
 
-  // Button to Join Game
+  // Button to join game
   $("#joinGameBtn").click(() => {
     app.enterPinScreen();
   })
 
+  // Button to enter pin and start game
   $("#startBtn").click(() => {
     app.joinGame();
   })
