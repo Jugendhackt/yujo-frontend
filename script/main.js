@@ -11,6 +11,10 @@ var server = "https://yujo.jugendhacker.de"
     currentScreenId: 0,
     uuid: null,
     gamepin: null,
+    round: 0,
+    creatorName: "",
+    teammateName: "",
+    healthPoints: null
   };
 
   // Funktion um einen Screen anzuzeigen (id = 0, 1, 2)
@@ -61,12 +65,21 @@ var server = "https://yujo.jugendhacker.de"
     })
   }
 
+  // Enter PinScreen anzeigen
   const enterPinScreen = () => {
-    
-    // API-Aufruf /join
     showScreen(screenIds.indexOf("enterPinScreen"))
 
   }
+
+  const getQuestion = () => {
+    $.get(`${server}/${state.uuid}/round/${state.round}`,data, (responseData, status) => {
+      if (status === 200) {
+        console.log(response)
+      }
+    })
+  }
+
+  // Spiel beitreten
   const joinGame = () => {
     var Joiner = $("#nameJoiner").val()
     var Pin = $("#PinEingeben").val()
