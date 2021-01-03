@@ -43,6 +43,7 @@ Welcher Spieler ist sportlicher?
 ## Code
 
 Frontend: https://github.com/Jugendhackt/yujo-frontend
+
 Backend: https://github.com/Jugendhackt/yujo-backend
 
 ![screenshot](./images/Gegner_hit.gif "Feuerball")
